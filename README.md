@@ -1,50 +1,68 @@
 # **Tmux Configuration**
 
-## **Overview**
-
-This Tmux configuration enhances productivity by adding mouse support, custom keybindings, and clear visual feedback for active and inactive panes.
-
----
-
-## **Key Features**
-
-- **Mouse support:** Scroll and select/copy text using the mouse  
-- **Optional Vim-like keybindings:** Navigate in copy mode like in Vim (disabled by default)  
-- **Pane and window numbering from 1:** Intuitive numbering for easier navigation  
-- **Subtle pane border highlighting:** Clear distinction between active and inactive panes  
-- **Expanded scrollback buffer:** Store up to 10,000 lines of scroll history per pane  
-- **Convenient pane management shortcuts:** Easily resize and switch between panes  
+### **Description**  
+A custom Tmux configuration file designed to enhance productivity by enabling mouse support, optional Vim keybindings, and highlighting SSH sessions in the pane borders and titles.
 
 ---
 
-## **Setup Instructions**
+### **Features**  
+- Mouse support for scrolling and text selection.
+- Optional Vim-style keybindings in copy mode.
+- Pane titles show `"SSH"` for active SSH sessions.
+- Subtle highlighting of active and inactive panes.
+- Synchronization mode for writing in all panes at once.
+- Configuration reload shortcut.
 
-1. Copy the `tmux.conf` file to your home directory:
+---
+
+### **Installation**
+
+1. **Clone the repository**:
    ```bash
-   cp tmux.conf ~/.tmux.conf
+   git clone https://github.com/username/tmux-config.git
    ```
-2. To apply the configuration for all users (optional):
+   
+2. **Copy the Tmux configuration file to your home directory**:
    ```bash
-   sudo cp tmux.conf /etc/tmux.conf
+   cp tmux-config/tmux.conf ~/.tmux.conf
+   ```
+
+3. **Reload Tmux**:
+   If Tmux is already running:
+   ```bash
+   tmux source-file ~/.tmux.conf
    ```
 
 ---
 
-## **Optional Configuration**
-
-### **Enable Vim-like Keybindings**
-
-Uncomment the following line in `~/.tmux.conf` to enable Vim-style navigation:
-```bash
-# setw -g mode-keys vi
-```
+### **Compatibility**  
+This configuration is compatible with **Tmux version 3.2 and above**.
 
 ---
 
-## **Customization Options**
+### **Keybindings Overview**
 
-- **Mouse support:** Toggle with `set -g mouse on/off`  
-- **Scrollback buffer size:** Adjust with `set -g history-limit <lines>`  
-- **Pane border colors:** Modify `pane-border-style` and `pane-active-border-style`  
+| Shortcut      | Description                                   |
+| --------------| ----------------------------------------------|
+| `Ctrl + b + S`| Toggle pane synchronization (write in all panes). |
+| `Ctrl + b + r`| Reload Tmux configuration.                    |
+| `Ctrl + b + %`| Split window vertically (side-by-side panes).  |
+| `Ctrl + b + "`| Split window horizontally (stacked panes).     |
+| `Ctrl + b + h/j/k/l` | Move between panes (like Vim navigation). |
+| `Ctrl + b + H/J/K/L` | Resize panes in 5-column/row increments.  |
+
+---
+
+### **Customizations**  
+- The configuration uses `screen-256color` to enable 256-color support.
+- To enable Vim keybindings in copy mode, uncomment the following line in `~/.tmux.conf`:
+  ```bash
+  # setw -g mode-keys vi
+  ```
+
+---
+
+### **Contributing**  
+Feel free to fork the repository, create a branch for your changes, and open a pull request.
 
 ---

@@ -18,7 +18,7 @@ A custom Tmux configuration file designed to enhance productivity with features 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/tmux-config.git
+   git clone https://github.com/uargh00/tmux-config.git
    ```
 
 2. Copy the Tmux configuration file to your home directory:

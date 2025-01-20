@@ -1,11 +1,11 @@
 # **Tmux Configuration**
 
-### **Description**  
+## **Description**  
 A custom Tmux configuration file designed to enhance productivity by enabling mouse support, optional Vim keybindings, and highlighting SSH sessions in the pane borders and titles.
 
 ---
 
-### **Features**  
+## **Features**  
 - Mouse support for scrolling and text selection.
 - Optional Vim-style keybindings in copy mode.
 - Pane titles show `"SSH"` for active SSH sessions.
@@ -15,11 +15,11 @@ A custom Tmux configuration file designed to enhance productivity by enabling mo
 
 ---
 
-### **Installation**
+## **Installation**
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/username/tmux-config.git
+   git clone https://github.com/uargh00/tmux-config.git
    ```
    
 2. **Copy the Tmux configuration file to your home directory**:
@@ -35,12 +35,12 @@ A custom Tmux configuration file designed to enhance productivity by enabling mo
 
 ---
 
-### **Compatibility**  
+## **Compatibility**  
 This configuration is compatible with **Tmux version 3.2 and above**.
 
 ---
 
-### **Keybindings Overview**
+## **Keybindings Overview**
 
 | Shortcut      | Description                                   |
 | --------------| ----------------------------------------------|
@@ -53,8 +53,7 @@ This configuration is compatible with **Tmux version 3.2 and above**.
 
 ---
 
-### **Customizations**  
-- The configuration uses `screen-256color` to enable 256-color support.
+## **Customizations**  
 - To enable Vim keybindings in copy mode, uncomment the following line in `~/.tmux.conf`:
   ```bash
   # setw -g mode-keys vi
@@ -62,7 +61,5 @@ This configuration is compatible with **Tmux version 3.2 and above**.
 
 ---
 
-### **Contributing**  
+## **Contributing**  
 Feel free to fork the repository, create a branch for your changes, and open a pull request.
-
----
